@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav style="text-align: center">
+        <a href="{{ url_for('home_content') }}">Library</a>
+        <a href="{{ url_for('edit_post') }}">Edit posts</a>
+    </nav>
+    <hr>
+    <div class="content" style="text-align: center">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
